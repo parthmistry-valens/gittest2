@@ -1,0 +1,15 @@
+version: 1
+job:
+  type: "processing"
+source:
+  endpoint: "lo_jdbc_mssql"
+  properties:
+    table: "test"
+target:
+  endpoint: "lo_jdbc_mssql"
+  operation: "append"
+  properties:
+    template: "mysql"
+    table: "test"
+    pre_sql: "test pr"
+    post_sql: "test po"
